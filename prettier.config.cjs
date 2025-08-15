@@ -11,4 +11,5 @@ module.exports = {
       options: { parser: 'svelte' },
     },
   ],
+  endOfLine: 'crlf',
 };
