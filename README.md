@@ -32,10 +32,7 @@ Built with **Svelte**, **Vite**, **Tailwind CSS** and **daisyUI**.
 # 1) Install dependencies
 npm install
 
-# 2) (Required for Tailwind v4 + PostCSS) – if not already installed
-npm i -D @tailwindcss/postcss autoprefixer
-
-# 3) Start the dev server
+# 2) Start the dev server
 npm run dev
 #Open the URL printed by Vite (usually http://localhost:5173).
 ```
@@ -69,5 +66,6 @@ npm run build
 npm run preview
 # Serves ./dist locally
 ```
+
 
 
