@@ -1,0 +1,31 @@
+/* Tailwind v4 + daisyUI v5 (CSS-first setup) */
+@import 'tailwindcss';
+
+@plugin "daisyui";
+
+/* Tell Tailwind where to scan for class names */
+@source "../index.html";
+@source "./**/*.svelte";
+@source "./**/*.{ts,js}";
+
+@keyframes float {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.float {
+	animation: float 3s ease-in-out infinite;
+}
+
+thead.sticky {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
