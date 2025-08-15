@@ -9,12 +9,26 @@
   // Build language options dynamically from all rows
   function langsFromContent(content?: string): string[] {
     if (!content) return [];
-    const codes = content.toUpperCase().match(/\b[A-Z]{2}\b/g) ?? [];
+
+    // Remove blacklisted tokens (case-insensitive, whole-word)
+    const blacklist = ['be', 'no', 'No', 'to'];
+    const escaped = blacklist.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const removeRe = new RegExp(`\\b(?:${escaped.join('|')})\\b`, 'gi');
+    const sanitized = content.replace(removeRe, ' ');
+
+    // Extract remaining two-letter codes
+    const codes = sanitized.toUpperCase().match(/\b[A-Z]{2}\b/g) ?? [];
+    codes.push('Anime');
+    codes.push('Music');
+    codes.push('Encodes');
     return Array.from(new Set(codes));
   }
+
+
   $: languageOptions = Array.from(new Set(allRows.flatMap((r) => langsFromContent(r.content))))
     .filter(Boolean)
-    .sort();
+    .sort((a,b)=>a.length-b.length||a.localeCompare(b))
+
 
   // Subscribe reactively to the store (Svelte auto-subscription)
   let f: FiltersState;

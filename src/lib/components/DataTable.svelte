@@ -53,11 +53,6 @@
   $: f = $filters;
 
   // ---- Utilities for filtering ----
-  function langsFromContent(content?: string): string[] {
-    if (!content) return [];
-    const codes = content.toUpperCase().match(/\b[A-Z]{2}\b/g) ?? [];
-    return Array.from(new Set(codes));
-  }
   function asNumberLike(v?: number | 'unlimited' | '?' | null): number {
     if (v === 'unlimited') return Number.POSITIVE_INFINITY;
     if (v === '?' || v == null) return 0;
@@ -89,7 +84,7 @@
 
   function indexerMatches(r: Indexer, filters: FiltersState): boolean {
     if (filters.language !== 'any') {
-      if (!langsFromContent(r.content).includes(filters.language.toUpperCase())) return false;
+      if (!(r.content || "").includes(filters.language)) return false;
     }
     if (filters.supportsCrypto) {
       const s = (r.crypto?.join(',') ?? '').replace(/[^a-z0-9]/gi, '').toLowerCase();
