@@ -1,3 +1,6 @@
+# Preview:
+https://hampelmen.github.io/nzb-sources/
+
 # NZB Sources
 
 Your ultimate guide to Usenet indexers.  
@@ -66,4 +69,5 @@ npm run build
 npm run preview
 # Serves ./dist locally
 ```
+
 
