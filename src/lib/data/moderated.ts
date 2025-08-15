@@ -67,6 +67,19 @@ export const moderated: Indexer[] = [
     ],
   },
   {
+    id: 'baka*',
+    name: 'baka*',
+    registration: 'invite',
+    payments: [],
+    crypto: [],
+    content: 'DE, Anime',
+    memberships: [
+      { nameKey: 'Pro', apiPerDay: 5000, nzbPerDay: 50, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'Baka', apiPerDay: 5000, nzbPerDay: 80, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'VIP', apiPerDay: 5000, nzbPerDay: 100, duration: 'Lifetime', priceKey: 'free' }
+    ],
+  },
+  {
     id: 'digitalcarnage.info',
     name: 'digitalcarnage.info',
     registration: 'open',
