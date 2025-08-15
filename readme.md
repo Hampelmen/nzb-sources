@@ -1,3 +1,5 @@
+Preview/Vorschau: https://captian-jack-cola.github.io/nzb-sources-svelte-preview
+
 # NZB Sources
 
 Your ultimate guide to Usenet indexers.  
@@ -66,4 +68,5 @@ npm run build
 npm run preview
 # Serves ./dist locally
 ```
+
 
