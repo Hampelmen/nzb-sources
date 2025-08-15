@@ -4,7 +4,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  base: '/nzb-sources-svelte-preview/',
+  base: '/nzb-sources/',
   plugins: [svelte()],
   resolve: {
     alias: {
