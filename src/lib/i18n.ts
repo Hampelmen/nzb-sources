@@ -80,6 +80,7 @@ export const strings = {
       guest: 'Guest',
     },
     registration: {
+      application: 'Application',
       open: 'Open',
       invite: 'Invite',
       'no-accounts': 'No accounts',
@@ -185,6 +186,7 @@ export const strings = {
       guest: 'Gast',
     },
     registration: {
+      application: 'Bewerbung',
       open: 'Offen',
       invite: 'per Einladung',
       'no-accounts': 'Keine Konten',
