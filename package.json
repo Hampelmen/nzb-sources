@@ -1,0 +1,31 @@
+{
+  "name": "nzb-sources-svelte",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.1.2",
+    "@tailwindcss/postcss": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.50",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "svelte": "^5.38.1",
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.2"
+  },
+  "version": "2.0.0",
+  "main": "svelte.config.js",
+  "author": "",
+  "license": "GPL-3.0",
+  "description": ""
+}
