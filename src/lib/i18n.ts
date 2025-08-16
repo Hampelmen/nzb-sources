@@ -57,6 +57,17 @@ export const strings = {
       scrollTop: 'Back to top',
       viewOnGithub: 'VIEW ON GitHub',
     },
+    filters: {
+      title: 'Filters',
+      minApi: 'Min API/Day',
+      minNzb: 'Min NZB/Day',
+      language: 'Content focused on',
+      any: 'Any',
+      lifetimeOnly: 'Lifetime only',
+      freeOnly: 'Free only',
+      supportsCrypto: 'Supports crypto',
+      clear: 'Clear filters',
+    },
     labels: {
       unlimited: 'Unlimited',
       unknown: '?',
@@ -69,6 +80,7 @@ export const strings = {
       guest: 'Guest',
     },
     registration: {
+      application: 'Application',
       open: 'Open',
       invite: 'Invite',
       'no-accounts': 'No accounts',
@@ -151,6 +163,17 @@ export const strings = {
       scrollTop: 'Nach Oben scrollen',
       viewOnGithub: 'AUF GITHUB ANSEHEN',
     },
+    filters: {
+      title: 'Filter',
+      minApi: 'Min. API/Tag',
+      minNzb: 'Min. NZB/Tag',
+      language: 'Focus auf Inhalt',
+      any: 'Alle',
+      lifetimeOnly: 'Nur Lifetime',
+      freeOnly: 'Nur Kostenlos',
+      supportsCrypto: 'Unterstützt Krypto',
+      clear: 'Zurücksetzen',
+    },
     labels: {
       unlimited: 'Unbegrenzt',
       unknown: '?',
@@ -163,6 +186,7 @@ export const strings = {
       guest: 'Gast',
     },
     registration: {
+      application: 'Bewerbung',
       open: 'Offen',
       invite: 'per Einladung',
       'no-accounts': 'Keine Konten',

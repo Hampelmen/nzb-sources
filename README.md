@@ -1,9 +1,10 @@
 # Preview:
+
 https://hampelmen.github.io/nzb-sources/
 
 # NZB Sources
 
-Your ultimate guide to Usenet indexers.  
+Your ultimate guide to Usenet indexers.
 
 Built with **Svelte**, **Vite**, **Tailwind CSS** and **daisyUI**.
 
@@ -40,6 +41,7 @@ npm run dev
 ## Scripts
 
 These are defined in `package.json`:
+
 ```json
 {
   "dev": "vite",
@@ -49,6 +51,7 @@ These are defined in `package.json`:
   "check-format": "prettier --check ."
 }
 ```
+
 - dev: run the Vite dev server
 - build: production build to dist/
 - preview: preview the production build
@@ -62,10 +65,8 @@ npm run build
 ```
 
 ## Preview
+
 ```bash
 npm run preview
 # Serves ./dist locally
 ```
-
-
-

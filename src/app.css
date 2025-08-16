@@ -9,23 +9,23 @@
 @source "./**/*.{ts,js}";
 
 @keyframes float {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-	100% {
-		transform: translateY(0);
-	}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .float {
-	animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 thead.sticky {
-	position: sticky;
-	top: 0;
-	z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }

@@ -1,5 +1,6 @@
 // Canonical data model: one Indexer has many memberships
 export type RegistrationCode =
+  | 'application'
   | 'open'
   | 'invite'
   | 'no-accounts'
