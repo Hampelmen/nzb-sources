@@ -282,13 +282,13 @@ export const moderated: Indexer[] = [
   },
   {
     id: 'nzbs.cc',
-    name: 'nzbs.cc',
-    registration: 'open',
+    name: 'nzbs.cc (unmoderated)',
+    registration: 'invite',
     payments: ['?'],
-    crypto: ['?'],
+    crypto: ['ETH'],
     content: '?',
     memberships: [
-      { nameKey: 'free', apiPerDay: '?', nzbPerDay: '?', duration: '?', priceKey: 'free' },
+      { nameKey: 'free', apiPerDay: '300', nzbPerDay: '30', duration: '?', priceKey: 'free' },
     ],
   },
   {
