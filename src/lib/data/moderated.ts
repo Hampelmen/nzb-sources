@@ -259,7 +259,7 @@ export const moderated: Indexer[] = [
     crypto: ['?'],
     content: 'AR',
     memberships: [
-      { nameKey: 'free', apiPerDay: ?, nzbPerDay: '500+', duration: '?', priceKey: '?' },
+      { nameKey: 'free', apiPerDay: '?', nzbPerDay: '500+', duration: '?', priceKey: '?' },
     ],
   },
   {
