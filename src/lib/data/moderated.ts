@@ -282,7 +282,7 @@ export const moderated: Indexer[] = [
   },
   {
     id: 'nzbs.cc',
-    name: 'nzbs.cc (unmoderated)',
+    name: 'nzbs.cc',
     registration: 'invite',
     payments: ['?'],
     crypto: ['ETH'],
