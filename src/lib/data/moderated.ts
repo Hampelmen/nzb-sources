@@ -252,6 +252,17 @@ export const moderated: Indexer[] = [
     ],
   },
   {
+    id: 'nzbatlas.com',
+    name: 'nzbatlas.com',
+    registration: 'open',
+    payments: ['?'],
+    crypto: ['?'],
+    content: 'AR',
+    memberships: [
+      { nameKey: 'free', apiPerDay: ?, nzbPerDay: '500+', duration: '?', priceKey: '?' },
+    ],
+  },
+  {
     id: 'nzb.cat',
     name: 'nzb.cat',
     registration: 'invite',
@@ -269,6 +280,19 @@ export const moderated: Indexer[] = [
         duration: 'Lifetime',
         price: '$125',
       },
+    ],
+  },
+    {
+    id: 'nzbflix.org',
+    name: 'nzbflix.org',
+    registration: 'open',
+    payments: ['bitcart', 'Cryptovoucher'],
+    crypto: ['XMR'],
+    content: 'DE',
+    memberships: [
+      { name: 'free', apiPerDay: '0', nzbPerDay: '3', duration: '?', price: 'free' },
+      { name: 'Premium', apiPerDay: '10000', nzbPerDay: '500', duration: '1 year', price: '20€' },
+      { name: 'Premium+Eweka', apiPerDay: '10000', nzbPerDay: '500', duration: '1 year', price: '50€' }
     ],
   },
   {
