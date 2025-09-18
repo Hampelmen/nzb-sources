@@ -74,9 +74,9 @@ export const moderated: Indexer[] = [
     crypto: [],
     content: 'DE, Anime',
     memberships: [
-      { nameKey: 'Pro', apiPerDay: 5000, nzbPerDay: 50, duration: 'Lifetime', priceKey: 'free' },
-      { nameKey: 'Baka', apiPerDay: 5000, nzbPerDay: 80, duration: 'Lifetime', priceKey: 'free' },
-      { nameKey: 'VIP', apiPerDay: 5000, nzbPerDay: 100, duration: 'Lifetime', priceKey: 'free' }
+      { nameKey: 'Kōhai', apiPerDay: 2500, nzbPerDay: 25, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'Taichō', apiPerDay: 5000, nzbPerDay: 75, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'Ōkami', apiPerDay: 5000, nzbPerDay: 125, duration: 'Lifetime', priceKey: 'free' }
     ],
   },
   {
