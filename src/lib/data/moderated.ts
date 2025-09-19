@@ -199,8 +199,8 @@ export const moderated: Indexer[] = [
     id: 'NewzBay.cc',
     name: 'NewzBay.cc',
     registration: 'invite',
-    payments: ['Own system', 'Gift Me Crypto'],
-    crypto: ['XMR', 'LTC'],
+    payments: ['Own system', 'Trocador'],
+    crypto: ['XMR', 'LTC', 'BTC', 'ETH', 'DASH', 'etc.'],
     content: 'DE',
     memberships: [
       {
@@ -228,7 +228,7 @@ export const moderated: Indexer[] = [
         priceKey: 'free',
       },
       { name: 'VIP', apiPerDay: 4000, nzbPerDay: 300, duration: '1 year', price: '10€' },
-      { name: 'VIP+', apiPerDay: 4000, nzbPerDay: 300, duration: '1 year', price: 'individual' },
+      { name: 'VIP+ (for uploaders)', apiPerDay: 8000, nzbPerDay: 500, duration: '1 year', price: 'individual' },
     ],
   },
   {
