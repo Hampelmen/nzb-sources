@@ -9,10 +9,11 @@
   import { moderated } from '@/lib/data/moderated';
   import { publicIndexers } from '@/lib/data/public';
   import { spotwebIndexers } from '@/lib/data/spotweb';
+  import { forums } from '@/lib/data/forums';
 
   import { strings, langStore } from '@/lib/i18n';
 
-  const allRows = [...moderated, ...publicIndexers, ...spotwebIndexers];
+  const allRows = [...moderated, ...publicIndexers, ...spotwebIndexers,...forums];
 </script>
 
 <svelte:head>
@@ -34,9 +35,9 @@
   <Navbar />
 
   <main class="mx-auto max-w-7xl px-4 py-6">
-    <div class="mb-8 rounded-lg border-4 border-dashed border-gray-700 p-4">
-      <p class="text-center text-lg font-bold text-yellow-400">{strings[$langStore].notice}</p>
-    </div>
+    <!-- <div class="mb-8 rounded-lg border-4 border-dashed border-gray-700 p-4">
+     <p class="text-center text-lg font-bold text-yellow-400">{strings[$langStore].notice}</p>
+   </div> -->
 
     <!-- GLOBAL FILTERS (affects all tables) -->
     <div class="mb-8">
@@ -69,6 +70,14 @@
       </h2>
       <p class="mb-4 opacity-80">{strings[$langStore].sections.spotwebDesc}</p>
       <DataTable rows={spotwebIndexers} disableColumns={['payment', 'content', 'crypto']} />
+    </section>
+
+    <section id="usenet-forums" class="mb-12">
+      <h2 class="text-primary mb-2 text-3xl font-semibold">
+        {strings[$langStore].nav.forumsTitle}
+      </h2>
+      <p class="mb-4 opacity-80">{strings[$langStore].sections.forumsDesc}</p>
+      <DataTable rows={forums} requireMemberships={false} disableColumns={['payment', 'crypto', 'memberships']} enableColumns={['opened']} searchPlaceholder={strings[$langStore].actions.searchPlaceholderForums}/>
     </section>
   </main>
 

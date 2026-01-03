@@ -22,6 +22,9 @@
         <a href="#spotweb-indexers" class="btn btn-primary btn-sm">
           {strings[$langStore].nav.navspotweb}
         </a>
+        <a href="#usenet-forums" class="btn btn-primary btn-sm">
+          {strings[$langStore].nav.forumsTitle}
+        </a>
         <a href="https://rexum.space/p/usenet-provider-deals/" class="btn btn-ghost btn-sm">
           {strings[$langStore].nav.deals}
         </a>

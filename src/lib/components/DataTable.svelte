@@ -14,28 +14,41 @@
   import { tick } from 'svelte';
 
   export let rows: Indexer[] = [];
+  export let requireMemberships = true;
+  export let searchPlaceholder: string | null = null;
 
-  type ColumnKey = 'registration' | 'payment' | 'crypto' | 'content';
+  type ColumnKey = 'opened' | 'registration' | 'memberships' | 'payment' | 'crypto' | 'content';
   export let disableColumns: ColumnKey[] = [];
+  export let enableColumns: ColumnKey[] = [];
 
   let search = '';
   let sortKey: 'indexer' | 'registration' = 'indexer';
   let sortDir: 'asc' | 'desc' = 'asc';
 
   let visible: Record<ColumnKey, boolean> = {
+    opened: false,
     registration: true,
+    memberships: true,
     payment: true,
     crypto: true,
     content: true,
   };
+
   $: disabledSet = new Set(disableColumns);
+  $: enabledSet = new Set(enableColumns);
   $: {
     for (const k of disabledSet) visible[k] = false;
+  }
+  $: {
+    for (const k of enabledSet) visible[k] = true;
   }
   function toggleCol(key: ColumnKey) {
     if (disabledSet.has(key)) return;
     visible = { ...visible, [key]: !visible[key] };
   }
+
+  $: showMembershipsCol = !disabledSet.has('memberships') && visible.memberships;
+  $: showOpenedCol = enabledSet.has('opened');
 
   let scrollEl: HTMLDivElement | null = null;
   let openMap: Record<string, boolean> = {};
@@ -129,7 +142,7 @@
   $: filtered = rows
     .filter((r) => indexerMatches(r, f))
     .map((r) => ({ ...r, memberships: visibleMemberships(r, f) }))
-    .filter((r) => r.memberships.length > 0)
+    .filter((r) => (requireMemberships ? r.memberships.length > 0 : true))
     .filter((r) => (search.trim() ? rowMatchesSearch(r, search.toLowerCase(), f) : true));
 
   let sorted: Indexer[] = filtered;
@@ -194,22 +207,24 @@
 <div class="mb-4">
   <input
     class="input input-bordered w-full"
-    placeholder={strings[$langStore].actions.searchPlaceholder}
+    placeholder={searchPlaceholder ?? strings[$langStore].actions.searchPlaceholder}
     bind:value={search}
   />
 </div>
 
 <div class="mb-4 flex flex-wrap items-center gap-2">
-  <div class="join">
-    <button class="btn btn-xs join-item" on:click={expandAll}>
-      {strings[$langStore].actions.expandAll}
-    </button>
-    <button class="btn btn-xs join-item" on:click={collapseAll}>
-      {strings[$langStore].actions.collapseAll}
-    </button>
-  </div>
+  {#if showMembershipsCol}
+    <div class="join">
+      <button class="btn btn-xs join-item" on:click={expandAll}>
+        {strings[$langStore].actions.expandAll}
+      </button>
+      <button class="btn btn-xs join-item" on:click={collapseAll}>
+        {strings[$langStore].actions.collapseAll}
+      </button>
+    </div>
 
   <div class="divider divider-horizontal"></div>
+  {/if}
 
   {#if !disabledSet.has('registration')}
     <button
@@ -250,6 +265,16 @@
       &nbsp;{strings[$langStore].tableHeaders.content}
     </button>
   {/if}
+
+  {#if enabledSet.has('opened')}
+    <button
+      class="btn btn-xs {visible.opened ? 'btn-primary' : 'btn-neutral'}"
+      on:click={() => toggleCol('opened')}
+    >
+      {visible.opened ? strings[$langStore].actions.hide : strings[$langStore].actions.show}
+      &nbsp;{strings[$langStore].tableHeaders.opened}
+    </button>
+  {/if}
 </div>
 
 <div class="max-h-[500px] overflow-auto rounded-lg shadow" bind:this={scrollEl}>
@@ -264,7 +289,12 @@
             {strings[$langStore].tableHeaders.registration}
           </th>
         {/if}
-        <th>{strings[$langStore].tableHeaders.memberships}</th>
+        {#if !disabledSet.has('opened') && visible.opened}
+          <th>{strings[$langStore].tableHeaders.opened}</th>
+        {/if}
+        {#if !disabledSet.has('memberships') && visible.memberships}
+          <th>{strings[$langStore].tableHeaders.memberships}</th>
+        {/if}
         {#if !disabledSet.has('payment') && visible.payment}<th
             >{strings[$langStore].tableHeaders.payment}</th
           >{/if}
@@ -285,64 +315,72 @@
             <td>{regLabel($langStore, r.registration)}</td>
           {/if}
 
-          <td class="align-top">
-            <div class="mb-2 flex flex-wrap gap-1">
-              {#each r.memberships.slice(0, 4) as m}
-                <span class="badge badge-outline">{displayMembershipName(m, $langStore)}</span>
-              {/each}
-              {#if r.memberships.length > 4}
-                <span class="badge">+{r.memberships.length - 4}</span>
-              {/if}
-            </div>
+          {#if !disabledSet.has('opened') && visible.opened}
+            <td>{r.opened && r.opened.trim() ? r.opened : '—'}</td>
+          {/if}
 
-            <div class="collapse-arrow border-base-300 rounded-box collapse border">
-              <input
-                type="checkbox"
-                bind:checked={openMap[r.id]}
-                on:change={(e) => onToggleOpen(r.id, e.currentTarget as HTMLInputElement)}
-              />
-              <div class="collapse-title text-sm font-medium">
-                {strings[$langStore].actions.showAll(r.memberships.length)}
+
+
+          {#if !disabledSet.has('memberships') && visible.memberships}
+            <td class="align-top">
+              <div class="mb-2 flex flex-wrap gap-1">
+                {#each r.memberships.slice(0, 4) as m}
+                  <span class="badge badge-outline">{displayMembershipName(m, $langStore)}</span>
+                {/each}
+                {#if r.memberships.length > 4}
+                  <span class="badge">+{r.memberships.length - 4}</span>
+                {/if}
               </div>
-              <div class="collapse-content">
-                <div class="overflow-x-auto">
-                  <table class="table-sm table">
-                    <thead>
-                      <tr>
-                        <th>{strings[$langStore].nestedHeaders.membership}</th>
-                        <th>{strings[$langStore].nestedHeaders.apiDay}</th>
-                        <th>{strings[$langStore].nestedHeaders.nzbDay}</th>
-                        <th>{strings[$langStore].nestedHeaders.duration}</th>
-                        <th>{strings[$langStore].nestedHeaders.price}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {#each r.memberships as m}
+
+              <div class="collapse-arrow border-base-300 rounded-box collapse border">
+                <input
+                  type="checkbox"
+                  bind:checked={openMap[r.id]}
+                  on:change={(e) => onToggleOpen(r.id, e.currentTarget as HTMLInputElement)}
+                />
+                <div class="collapse-title text-sm font-medium">
+                  {strings[$langStore].actions.showAll(r.memberships.length)}
+                </div>
+                <div class="collapse-content">
+                  <div class="overflow-x-auto">
+                    <table class="table-sm table">
+                      <thead>
                         <tr>
-                          <td class="font-medium">{displayMembershipName(m, $langStore)}</td>
-                          <td>
-                            {#if m.apiKey}
-                              {tApiKey($langStore, m.apiKey)}
-                            {:else}
-                              {fmtLimit($langStore, m.apiPerDay)}
-                            {/if}
-                          </td>
-                          <td>{fmtLimit($langStore, m.nzbPerDay)}</td>
-                          <td
-                            >{sReplace(
-                              $langStore,
-                              m.duration ?? strings[$langStore].labels.unknown
-                            )}</td
-                          >
-                          <td>{displayPrice(m, $langStore)}</td>
+                          <th>{strings[$langStore].nestedHeaders.membership}</th>
+                          <th>{strings[$langStore].nestedHeaders.apiDay}</th>
+                          <th>{strings[$langStore].nestedHeaders.nzbDay}</th>
+                          <th>{strings[$langStore].nestedHeaders.duration}</th>
+                          <th>{strings[$langStore].nestedHeaders.price}</th>
                         </tr>
-                      {/each}
-                    </tbody>
-                  </table>
+                      </thead>
+                      <tbody>
+                        {#each r.memberships as m}
+                          <tr>
+                            <td class="font-medium">{displayMembershipName(m, $langStore)}</td>
+                            <td>
+                              {#if m.apiKey}
+                                {tApiKey($langStore, m.apiKey)}
+                              {:else}
+                                {fmtLimit($langStore, m.apiPerDay)}
+                              {/if}
+                            </td>
+                            <td>{fmtLimit($langStore, m.nzbPerDay)}</td>
+                            <td
+                              >{sReplace(
+                                $langStore,
+                                m.duration ?? strings[$langStore].labels.unknown
+                              )}</td
+                            >
+                            <td>{displayPrice(m, $langStore)}</td>
+                          </tr>
+                        {/each}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
-            </div>
-          </td>
+            </td>
+          {/if}
 
           {#if !disabledSet.has('payment') && visible.payment}<td
               >{r.payments?.join(', ') ?? '—'}</td
