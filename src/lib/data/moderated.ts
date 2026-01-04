@@ -304,7 +304,7 @@ export const moderated: Indexer[] = [
   },
   {
     id: 'nzbflix-org',
-    name: 'NzbFlix',
+    name: 'NZBFlix',
     url: 'https://nzbflix.org/',
     registration: 'down',
     payments: ['bitcart', 'Cryptovoucher'],
