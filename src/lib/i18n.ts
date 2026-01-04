@@ -17,6 +17,7 @@ export const strings = {
       deals: 'Provider Deals',
       guide: 'Usenet Guide (DE)',
       discord: 'Usenet',
+      forumsTitle: 'Forums',
     },
     sections: {
       moderatedTitle: 'Moderated Indexers',
@@ -28,14 +29,17 @@ export const strings = {
       uploadWarning:
         'Beware that they might also index malicious uploads containing trojans or other viruses.',
       spotwebDesc: 'Great for Dutch and Flemish content, but also has a lot of English content.',
+      forumsDesc: "Forums do not offer API's",
     },
     tableHeaders: {
       indexer: 'Indexer',
+      forum: 'Forum',
       registration: 'Registration',
       memberships: 'Memberships',
       payment: 'Payment',
       crypto: 'Crypto',
       content: 'Content',
+      opened: 'Opened',
     },
     nestedHeaders: {
       membership: 'Membership',
@@ -46,6 +50,7 @@ export const strings = {
     },
     actions: {
       searchPlaceholder: 'Search indexers...',
+      searchPlaceholderForums: 'Search forum...',
       showAll: (n: number) => `Show memberships (${n})`,
       expandAll: 'Expand all memberships',
       collapseAll: 'Collapse all memberships',
@@ -83,14 +88,17 @@ export const strings = {
       application: 'Application',
       open: 'Open',
       invite: 'Invite',
+      'invite only': 'Invite only',
+      closed: 'Closed',
       'no-accounts': 'No accounts',
       'open-no-need': 'Open/no need',
       'open-weekends': 'Open on weekends',
+      down: 'down',
       unknown: '?',
     },
     footer: {
       notice: "*if you know, you know. If you don't, please don't ask.",
-      thanksPrefix: 'Thx to Just2it, sbestran &',
+      thanksPrefix: 'Thx to Just2it, sbestran, Captian-Jack-Cola &',
     },
     api: {
       noApi: 'No API',
@@ -122,6 +130,7 @@ export const strings = {
       deals: 'Anbieter-Angebote',
       guide: 'Usenet Guide (DE)',
       discord: 'Usenet',
+      forumsTitle: 'Forums',
     },
     sections: {
       moderatedTitle: 'Moderierte Indexer',
@@ -134,14 +143,17 @@ export const strings = {
         'Achtung: Es können auch bösartige Uploads mit Trojanern oder anderen Viren enthalten sein.',
       spotwebDesc:
         'Hervorragend für niederländische und flämische Inhalte, hat aber auch viele englische Inhalte.',
+      forumsDesc: "Forums bieten keine API's an",
     },
     tableHeaders: {
       indexer: 'Indexer',
+      forum: 'Forum',
       registration: 'Registrierung',
       memberships: 'Mitgliedschaften',
       payment: 'Zahlung',
       crypto: 'Krypto',
       content: 'Inhalt',
+      opened: 'Zuletzt Geöffnet',
     },
     nestedHeaders: {
       membership: 'Mitgliedschaft',
@@ -152,6 +164,7 @@ export const strings = {
     },
     actions: {
       searchPlaceholder: 'Indexer suchen...',
+      searchPlaceholderForums: 'Forum suchen...',
       showAll: (n: number) => `Mitgliedschaften anzeigen (${n})`,
       expandAll: 'Alle Mitgliedschaften aufklappen',
       collapseAll: 'Alle Mitgliedschaften zuklappen',
@@ -189,14 +202,17 @@ export const strings = {
       application: 'Bewerbung',
       open: 'Offen',
       invite: 'per Einladung',
+      'invite only': 'nur per Einladung',
+      closed: 'Geschlossen',
       'no-accounts': 'Keine Konten',
       'open-no-need': 'Offen/keine Anmeldung',
       'open-weekends': 'Am Wochenende offen',
+      down: 'Down',
       unknown: '?',
     },
     footer: {
       notice: "*Wenn du's weißt, weißt du's. Wenn nicht, bitte nicht fragen.",
-      thanksPrefix: 'Danke an Just2it, sbestran &',
+      thanksPrefix: 'Danke an Just2it, sbestran, Captian-Jack-Cola &',
     },
     api: {
       noApi: 'Keine Api',
@@ -219,6 +235,7 @@ export const strings = {
 } as const;
 
 export function regLabel(lang: Lang, code: RegistrationCode) {
+  // @ts-ignore
   return strings[lang].registration[code] ?? strings[lang].registration.unknown;
 }
 

@@ -3,12 +3,15 @@ export type RegistrationCode =
   | 'application'
   | 'open'
   | 'invite'
+  | 'invite only'
+  | 'closed'
   | 'no-accounts'
   | 'open-no-need'
   | 'open-weekends'
+  | 'down'
   | 'unknown';
 
-export type Limit = number | 'unlimited' | '?' | null;
+export type Limit = number | string | 'unlimited' | '?' | null;
 export type apiLimit = 'noApi' | 'unlimited' | 'noApiButRSS' | 'cantBeAdded' | 'notWorking' | null;
 
 // Optional keys let you store language-agnostic codes and translate at render time.
@@ -31,5 +34,6 @@ export type Indexer = {
   crypto?: string[]; // e.g. ['BTC','XMR']
   content?: string; // e.g. 'EN', 'DE (ES, EN)', 'EN, Anime'
   url?: string; // optional
-  memberships: Membership[];
+  opened?: string; // forums
+  memberships?: Membership[];
 };
