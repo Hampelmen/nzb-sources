@@ -8,6 +8,7 @@ export type RegistrationCode =
   | 'no-accounts'
   | 'open-no-need'
   | 'open-weekends'
+  | 'down'
   | 'unknown';
 
 export type Limit = number | string | 'unlimited' | '?' | null;

@@ -24,11 +24,9 @@
     return Array.from(new Set(codes));
   }
 
-
   $: languageOptions = Array.from(new Set(allRows.flatMap((r) => langsFromContent(r.content))))
     .filter(Boolean)
-    .sort((a,b)=>a.length-b.length||a.localeCompare(b))
-
+    .sort((a, b) => a.length - b.length || a.localeCompare(b));
 
   // Subscribe reactively to the store (Svelte auto-subscription)
   let f: FiltersState;

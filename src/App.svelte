@@ -13,7 +13,7 @@
 
   import { strings, langStore } from '@/lib/i18n';
 
-  const allRows = [...moderated, ...publicIndexers, ...spotwebIndexers,...forums];
+  const allRows = [...moderated, ...publicIndexers, ...spotwebIndexers, ...forums];
 </script>
 
 <svelte:head>
@@ -77,7 +77,13 @@
         {strings[$langStore].nav.forumsTitle}
       </h2>
       <p class="mb-4 opacity-80">{strings[$langStore].sections.forumsDesc}</p>
-      <DataTable rows={forums} requireMemberships={false} disableColumns={['payment', 'crypto', 'memberships']} enableColumns={['opened']} searchPlaceholder={strings[$langStore].actions.searchPlaceholderForums}/>
+      <DataTable
+        rows={forums}
+        requireMemberships={false}
+        disableColumns={['payment', 'crypto', 'memberships']}
+        enableColumns={['opened']}
+        searchPlaceholder={strings[$langStore].actions.searchPlaceholderForums}
+      />
     </section>
   </main>
 

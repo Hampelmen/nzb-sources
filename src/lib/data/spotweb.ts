@@ -3,7 +3,8 @@ import type { Indexer } from './indexerStructure';
 export const spotwebIndexers: Indexer[] = [
   {
     id: 'clubnzb.com',
-    name: 'clubnzb.com',
+    name: 'ClubNZB',
+    url: 'https://clubnzb.com/',
     registration: 'open-no-need',
     payments: [],
     crypto: [],
@@ -19,25 +20,9 @@ export const spotwebIndexers: Indexer[] = [
     ],
   },
   {
-    id: 'nzbsearchmachine.com',
-    name: 'nzbsearchmachine.com',
-    registration: 'open-weekends',
-    payments: [],
-    crypto: [],
-    content: '',
-    memberships: [
-      {
-        nameKey: 'free',
-        apiKey: 'unlimited',
-        nzbPerDay: 'unlimited',
-        duration: 'Lifetime',
-        priceKey: 'free',
-      },
-    ],
-  },
-  {
     id: 'nzbserver.com',
-    name: 'nzbserver.com',
+    name: 'NZBServer',
+    url: 'https://www.nzbserver.com/',
     registration: 'no-accounts',
     payments: [],
     crypto: [],
@@ -54,7 +39,8 @@ export const spotwebIndexers: Indexer[] = [
   },
   {
     id: 'nzbstars.com',
-    name: 'NZBStars.com',
+    name: 'NZBStars',
+    url: 'https://nzbstars.com/',
     registration: 'open-no-need',
     payments: [],
     crypto: [],
@@ -71,7 +57,8 @@ export const spotwebIndexers: Indexer[] = [
   },
   {
     id: 'spotnzb.com',
-    name: 'spotnzb.com',
+    name: 'SpotNZB',
+    url: 'https://spotnzb.com/',
     registration: 'no-accounts',
     payments: [],
     crypto: [],

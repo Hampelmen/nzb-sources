@@ -97,7 +97,7 @@
 
   function indexerMatches(r: Indexer, filters: FiltersState): boolean {
     if (filters.language !== 'any') {
-      if (!(r.content || "").includes(filters.language)) return false;
+      if (!(r.content || '').includes(filters.language)) return false;
     }
     if (filters.supportsCrypto) {
       const s = (r.crypto?.join(',') ?? '').replace(/[^a-z0-9]/gi, '').toLowerCase();
@@ -223,7 +223,7 @@
       </button>
     </div>
 
-  <div class="divider divider-horizontal"></div>
+    <div class="divider divider-horizontal"></div>
   {/if}
 
   {#if !disabledSet.has('registration')}
@@ -282,7 +282,9 @@
     <thead class="bg-base-300 sticky">
       <tr>
         <th class="cursor-pointer" on:click={() => setSort('indexer')}>
-          {strings[$langStore].tableHeaders.indexer}
+          {!enabledSet.has('opened')
+            ? strings[$langStore].tableHeaders.indexer
+            : strings[$langStore].tableHeaders.forum}
         </th>
         {#if !disabledSet.has('registration') && visible.registration}
           <th class="cursor-pointer" on:click={() => setSort('registration')}>
@@ -310,7 +312,15 @@
     <tbody>
       {#each sorted as r}
         <tr>
-          <td class="font-medium">{sReplace($langStore, r.name)}</td>
+          <td class="font-medium">
+            {#if r.url && r.url !== ''}
+              <a href={r.url} target="_blank" rel="noopener noreferrer" class="link"
+                >{sReplace($langStore, r.name)}</a
+              >
+            {:else}
+              {sReplace($langStore, r.name)}
+            {/if}
+          </td>
           {#if !disabledSet.has('registration') && visible.registration}
             <td>{regLabel($langStore, r.registration)}</td>
           {/if}
@@ -318,8 +328,6 @@
           {#if !disabledSet.has('opened') && visible.opened}
             <td>{r.opened && r.opened.trim() ? r.opened : '—'}</td>
           {/if}
-
-
 
           {#if !disabledSet.has('memberships') && visible.memberships}
             <td class="align-top">

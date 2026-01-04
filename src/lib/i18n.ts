@@ -29,11 +29,11 @@ export const strings = {
       uploadWarning:
         'Beware that they might also index malicious uploads containing trojans or other viruses.',
       spotwebDesc: 'Great for Dutch and Flemish content, but also has a lot of English content.',
-      forumsDesc:
-        'Forums do not offer API\'s',
+      forumsDesc: "Forums do not offer API's",
     },
     tableHeaders: {
       indexer: 'Indexer',
+      forum: 'Forum',
       registration: 'Registration',
       memberships: 'Memberships',
       payment: 'Payment',
@@ -93,6 +93,7 @@ export const strings = {
       'no-accounts': 'No accounts',
       'open-no-need': 'Open/no need',
       'open-weekends': 'Open on weekends',
+      down: 'down',
       unknown: '?',
     },
     footer: {
@@ -142,11 +143,11 @@ export const strings = {
         'Achtung: Es können auch bösartige Uploads mit Trojanern oder anderen Viren enthalten sein.',
       spotwebDesc:
         'Hervorragend für niederländische und flämische Inhalte, hat aber auch viele englische Inhalte.',
-      forumsDesc:
-        'Forums bieten keine API\'s an',
+      forumsDesc: "Forums bieten keine API's an",
     },
     tableHeaders: {
       indexer: 'Indexer',
+      forum: 'Forum',
       registration: 'Registrierung',
       memberships: 'Mitgliedschaften',
       payment: 'Zahlung',
@@ -206,6 +207,7 @@ export const strings = {
       'no-accounts': 'Keine Konten',
       'open-no-need': 'Offen/keine Anmeldung',
       'open-weekends': 'Am Wochenende offen',
+      down: 'Down',
       unknown: '?',
     },
     footer: {
