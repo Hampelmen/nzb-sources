@@ -23,7 +23,7 @@ export const publicIndexers: Indexer[] = [
     id: 'binzb',
     name: 'BiNZB',
     url: 'https://www.binzb.com',
-    registration: 'down',
+    registration: 'no-accounts',
     payments: [],
     crypto: [],
     content: 'No API',
