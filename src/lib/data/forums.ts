@@ -14,7 +14,7 @@ export const forums: Indexer[] = [
     name: 'Baka Board',
     url: 'https://baka-bewerbung.su/',
     registration: 'application',
-    content: 'Animes Ger Sub and Dub',
+    content: 'German Anime and Manga',
     opened: '',
   },
   {
