@@ -4,10 +4,10 @@
 
 <footer class="bg-gray-800 px-4 py-8">
   <div class="mx-auto max-w-7xl text-center">
-    <p class="mb-2">
+    <!-- <p class="mb-2">
       {strings[$langStore].footer.notice}
     </p>
-    &nbsp
+    &nbsp -->
     <p class="mb-4">
       {strings[$langStore].footer.thanksPrefix}
       <a
