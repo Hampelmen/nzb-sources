@@ -9,7 +9,7 @@ export const strings = {
     title: 'NZB Sources',
     subtitle: 'Your ultimate guide to Usenet indexers',
     notice:
-      'For now this site only lists Usenet Indexers. However, forums and other websites will be added in the future.',
+      'Now the website offers not only lists of usenet indexers but also forums.',
     nav: {
       navmoderated: 'Moderated Indexers',
       navpublic: 'Public Indexers',
@@ -29,7 +29,7 @@ export const strings = {
       uploadWarning:
         'Beware that they might also index malicious uploads containing trojans or other viruses.',
       spotwebDesc: 'Great for Dutch and Flemish content, but also has a lot of English content.',
-      forumsDesc: "Forums do not offer API's",
+      forumsDesc: "Forums usually do not offer API's for automation.",
     },
     tableHeaders: {
       indexer: 'Indexer',
@@ -122,7 +122,7 @@ export const strings = {
     title: 'NZB-Quellen',
     subtitle: 'Dein ultimativer Leitfaden zu Usenet-Indexern',
     notice:
-      'Momentan listet diese Seite nur Usenet-Indexer auf. Foren und andere Websites werden in Zukunft hinzugefügt.',
+      'Jetzt bietet die Website nicht nur Listen von Usenet Indexern sondern auch Foren an.',
     nav: {
       navmoderated: 'Moderierte Indexer',
       navpublic: 'Öffentliche Indexer',
@@ -143,7 +143,7 @@ export const strings = {
         'Achtung: Es können auch bösartige Uploads mit Trojanern oder anderen Viren enthalten sein.',
       spotwebDesc:
         'Hervorragend für niederländische und flämische Inhalte, hat aber auch viele englische Inhalte.',
-      forumsDesc: "Forums bieten keine API's an",
+      forumsDesc: "Foren bieten normalerweise keine API's für Automationen an",
     },
     tableHeaders: {
       indexer: 'Indexer',
@@ -277,4 +277,5 @@ export function tApiKey(lang: Lang, key: apiLimit) {
   if (key === null) return strings[lang].api.unknown;
   return strings[lang].api[key] ?? strings[lang].api.unknown;
 }
+
 
