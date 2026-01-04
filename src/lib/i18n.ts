@@ -9,7 +9,7 @@ export const strings = {
     title: 'NZB Sources',
     subtitle: 'Your ultimate guide to Usenet indexers',
     notice:
-      'Now the website offers not only lists of usenet indexers but also forums.',
+      'Please help to keep the information up to date. Create pull requests or contact me on Discord (@hampelmannn) or Matrix (@hampelmen:matrix.org).',
     nav: {
       navmoderated: 'Moderated Indexers',
       navpublic: 'Public Indexers',
@@ -122,7 +122,7 @@ export const strings = {
     title: 'NZB-Quellen',
     subtitle: 'Dein ultimativer Leitfaden zu Usenet-Indexern',
     notice:
-      'Jetzt bietet die Website nicht nur Listen von Usenet Indexern sondern auch Foren an.',
+      'Bitte hilf mit, die Informationen auf dem neuesten Stand zu halten. Erstelle Pull Requests oder melde dich bei Discrod (@hampelmannn) oder Matrix (@hampelmen:matrix.org).',
     nav: {
       navmoderated: 'Moderierte Indexer',
       navpublic: 'Öffentliche Indexer',
@@ -230,6 +230,8 @@ export const strings = {
       '(until--30d--no--login)': '(bis 30 Tage ohne Anmeldung)',
       '(until--180d--no--login)': '(bis 180 Tage ohne Anmeldung)',
       '(often--down)': '(Hohe Ausfall rate)',
+      'German Movie and TV Encodes': 'Deutsche Film und TV Encodes',
+      '': ''
     },
   },
 } as const;
@@ -277,5 +279,6 @@ export function tApiKey(lang: Lang, key: apiLimit) {
   if (key === null) return strings[lang].api.unknown;
   return strings[lang].api[key] ?? strings[lang].api.unknown;
 }
+
 
 
