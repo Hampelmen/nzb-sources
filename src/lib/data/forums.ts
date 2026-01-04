@@ -6,7 +6,7 @@ export const forums: Indexer[] = [
     name: 'ABook.link',
     url: 'https://abook.link/book/',
     registration: 'invite only',
-    content: 'Audiobooks',
+    content: 'EN, Audiobooks',
     opened: '',
   },
   {
@@ -14,7 +14,7 @@ export const forums: Indexer[] = [
     name: 'Baka Board',
     url: 'https://baka-bewerbung.su/',
     registration: 'application',
-    content: 'German Anime and Manga',
+    content: 'DE, Anime',
     opened: '',
   },
   {
@@ -22,7 +22,7 @@ export const forums: Indexer[] = [
     name: 'BinNews France',
     url: 'https://www.binnews.eu/',
     registration: 'open',
-    content: 'French',
+    content: 'FR',
     opened: '',
   },
   {
@@ -30,7 +30,7 @@ export const forums: Indexer[] = [
     name: 'Cinema of Usenet',
     url: 'https://www.cinema-of-usenet.com/',
     registration: 'closed',
-    content: 'German Movie and TV Encodes',
+    content: 'DE, Movie and TV Encodes',
     opened: '2025-12-24',
   },
   {
@@ -38,7 +38,7 @@ export const forums: Indexer[] = [
     name: 'FileLeechers',
     url: 'https://fileleechers.com/',
     registration: 'closed',
-    content: 'German',
+    content: 'DE',
     opened: '2025-12-24',
   },
   {
@@ -46,7 +46,7 @@ export const forums: Indexer[] = [
     name: 'FileSharingTalk',
     url: 'https://filesharingtalk.com/nzbs/',
     registration: 'open',
-    content: 'English',
+    content: 'EN',
     opened: '',
   },
   {
@@ -54,7 +54,7 @@ export const forums: Indexer[] = [
     name: 'HDUse',
     url: 'https://hduse.net/',
     registration: 'invite only',
-    content: 'Turkish',
+    content: 'TR',
     opened: '',
   },
   {
@@ -62,7 +62,7 @@ export const forums: Indexer[] = [
     name: 'House of Usenet',
     url: 'https://house-of-usenet.com/',
     registration: 'closed',
-    content: 'German',
+    content: 'DE',
     opened: '2025-12-24',
   },
   {
@@ -78,7 +78,7 @@ export const forums: Indexer[] = [
     name: 'NZBCave',
     url: 'https://www.nzbcave.co.uk/v3/index.php',
     registration: 'open',
-    content: 'English',
+    content: 'EN',
     opened: '',
   },
   {
@@ -86,7 +86,7 @@ export const forums: Indexer[] = [
     name: 'NZBforYou',
     url: 'https://nzbforyou.com/',
     registration: 'open',
-    content: 'English',
+    content: 'EN',
     opened: '',
   },
   {
@@ -94,7 +94,7 @@ export const forums: Indexer[] = [
     name: 'NZBgrabit',
     url: 'https://nzbgrabit.org/',
     registration: 'open',
-    content: 'English',
+    content: 'EN',
     opened: '',
   },
   {
@@ -102,7 +102,7 @@ export const forums: Indexer[] = [
     name: 'NZBNewzFrance',
     url: 'https://www.nzbnewzfrance.ninja',
     registration: 'open',
-    content: 'French',
+    content: 'FR',
     opened: '',
   },
   {
@@ -110,7 +110,7 @@ export const forums: Indexer[] = [
     name: 'SecretBinaries',
     url: 'https://www.secretbinaries.net/',
     registration: 'closed',
-    content: 'German',
+    content: 'DE',
     opened: '',
   },
   {
@@ -118,7 +118,7 @@ export const forums: Indexer[] = [
     name: 'Sky of Usenet',
     url: 'https://sky-of-use.net/',
     registration: 'invite only',
-    content: 'German',
+    content: 'DE',
     opened: '',
   },
   {
@@ -126,7 +126,7 @@ export const forums: Indexer[] = [
     name: 'The Hive',
     url: 'https://the-hive.be/forum/',
     registration: 'open',
-    content: 'English',
+    content: 'EN',
     opened: '',
   },
   {
@@ -134,7 +134,7 @@ export const forums: Indexer[] = [
     name: 'UHD100',
     url: 'https://uhd100.com/',
     registration: 'closed',
-    content: 'English full discs',
+    content: 'EN, full discs',
     opened: '',
   },
   {
@@ -142,7 +142,7 @@ export const forums: Indexer[] = [
     name: 'Usenet-4All',
     url: 'https://usenet-4all.pw/',
     registration: 'closed',
-    content: 'German',
+    content: 'DE',
     opened: 'never',
   },
   {
@@ -150,7 +150,7 @@ export const forums: Indexer[] = [
     name: 'Usenet-Crew',
     url: 'https://usenet-crew.com/',
     registration: 'closed',
-    content: 'German',
+    content: 'DE',
     opened: '',
   },
   {
@@ -158,7 +158,7 @@ export const forums: Indexer[] = [
     name: 'UsenetHD',
     url: 'https://www.usenethd.li/',
     registration: 'closed',
-    content: 'Spanish',
+    content: 'ES',
     opened: '',
   },
   {
@@ -166,7 +166,7 @@ export const forums: Indexer[] = [
     name: 'VietNZB',
     url: 'https://vietnzb.club/community/index.php',
     registration: 'open',
-    content: 'Vietnamese',
+    content: 'VI',
     opened: '',
   },
 ];
