@@ -153,7 +153,7 @@ export const moderated: Indexer[] = [
   },
   {
     id: 'gingadaddy',
-    name: 'GingaDADDY.com',
+    name: 'GingaDADDY',
     url: 'https://www.gingadaddy.com/index.php',
     registration: 'open',
     payments: ['PayPal'],
