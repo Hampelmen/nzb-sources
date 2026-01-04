@@ -10,6 +10,14 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
+    id: 'back2usenet',
+    name: 'Back2Usenet',
+    url: 'https://www.back2use.net/3sd4rt8/index.php',
+    registration: 'closed',
+    content: 'DE',
+    openend: '',
+  },
+  {
     id: 'baka-board',
     name: 'Baka Board',
     url: 'https://baka-bewerbung.su/',
@@ -47,6 +55,14 @@ export const forums: Indexer[] = [
     url: 'https://filesharingtalk.com/nzbs/',
     registration: 'open',
     content: 'EN',
+    opened: '',
+  },
+  {
+    id: 'friends-of-binaries',
+    name: 'Friends of Binaries',
+    url: 'https://friends-of-binaries.info/index.php',
+    registration: 'invite, application',
+    content: 'DE',
     opened: '',
   },
   {
@@ -122,6 +138,14 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
+    id: 'the-evil-news',
+    name: 'The Evil News',
+    url: 'https://the-evil-news.info/v2/forum.php',
+    registration: 'open',
+    content: 'DE',
+    opened: '',
+  },
+  {
     id: 'the-hive',
     name: 'The Hive',
     url: 'https://the-hive.be/forum/',
@@ -149,7 +173,7 @@ export const forums: Indexer[] = [
     id: 'usenet-crew',
     name: 'Usenet-Crew',
     url: 'https://usenet-crew.com/',
-    registration: 'closed',
+    registration: 'open',
     content: 'DE',
     opened: '',
   },
@@ -159,6 +183,14 @@ export const forums: Indexer[] = [
     url: 'https://www.usenethd.li/',
     registration: 'closed',
     content: 'ES',
+    opened: '',
+  },
+  {
+    id: 'usenet-space-central',
+    name: 'Usenet Space Central',
+    url: 'https://usenet-space-central.info/',
+    registration: 'invite only',
+    content: 'DE',
     opened: '',
   },
   {
