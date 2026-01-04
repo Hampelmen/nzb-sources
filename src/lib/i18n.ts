@@ -88,6 +88,7 @@ export const strings = {
       application: 'Application',
       open: 'Open',
       invite: 'Invite',
+      'invite, application': 'Invite, Application',
       'invite only': 'Invite only',
       closed: 'Closed',
       'no-accounts': 'No accounts',
@@ -202,6 +203,7 @@ export const strings = {
       application: 'Bewerbung',
       open: 'Offen',
       invite: 'per Einladung',
+      'invite, application': 'Einladung, Bewerbung',
       'invite only': 'nur per Einladung',
       closed: 'Geschlossen',
       'no-accounts': 'Keine Konten',
@@ -279,6 +281,7 @@ export function tApiKey(lang: Lang, key: apiLimit) {
   if (key === null) return strings[lang].api.unknown;
   return strings[lang].api[key] ?? strings[lang].api.unknown;
 }
+
 
 
 
