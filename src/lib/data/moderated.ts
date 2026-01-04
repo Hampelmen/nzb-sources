@@ -312,7 +312,7 @@ export const moderated: Indexer[] = [
     content: 'DE',
     memberships: [
       { name: 'free', apiPerDay: '0', nzbPerDay: '3', duration: '?', price: 'free' },
-      { name: 'trial', apiPerDay: '50', nzbPerDay: '5', duration: '14 days', price: 'free' }
+      { name: 'trial', apiPerDay: '50', nzbPerDay: '5', duration: '14 days', price: 'free' },
       { name: 'Premium', apiPerDay: '10000', nzbPerDay: '500', duration: '1 year', price: '20€' },
       {
         name: 'Premium - Cryptovoucher',
