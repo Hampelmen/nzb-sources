@@ -7,10 +7,10 @@
     <p class="mb-2">
       {strings[$langStore].footer.notice}
     </p>
-
+    &nbsp
     <p class="mb-4">
       {strings[$langStore].footer.thanksPrefix}
-      &nbsp;<a
+      <a
         href="https://rexum.space"
         class="link link-hover"
         target="_blank"
