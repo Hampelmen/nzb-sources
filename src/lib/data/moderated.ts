@@ -345,25 +345,6 @@ export const moderated: Indexer[] = [
     ],
   },
   {
-    id: 'in*',
-    name: 'in*',
-    url: 'https://anonym.es/?https://tinyurl.com/usenet-infinity',
-    registration: 'invite',
-    payments: ['PayPal', 'Mycelium Gear', 'CoinPayments'],
-    crypto: ['BTC', 'LTC', 'XMR', 'ETH'],
-    content: 'EN',
-    memberships: [
-      {
-        name: 'User',
-        apiPerDay: 48,
-        nzbPerDay: 5,
-        duration: 'Lifetime (until--30d--no--login)',
-        priceKey: 'free',
-      },
-      { name: 'Friend', apiPerDay: 1000, nzbPerDay: 1000, duration: 'Lifetime', price: '$10' },
-    ],
-  },
-  {
     id: 'nzb-life',
     name: 'nzb.life',
     url: 'https://www.nzb.su/',
@@ -479,26 +460,6 @@ export const moderated: Indexer[] = [
         duration: 'Lifetime',
         price: '40£',
       },
-    ],
-  },
-  {
-    id: 'omg*',
-    name: 'omg*',
-    url: 'https://anonym.es/?https://tinyurl.com/omg-usenet',
-    registration: 'invite',
-    payments: ['own crypto system?'],
-    crypto: ['BTC', 'BCH', 'DASH', 'DOGE', 'ETH', 'LTC', 'XMR', 'ZEC'],
-    content: 'EN',
-    memberships: [
-      {
-        nameKey: 'free',
-        name: 'User',
-        apiPerDay: 10,
-        nzbPerDay: 10,
-        duration: 'Lifetime',
-        priceKey: 'free',
-      },
-      { name: 'VIP', apiPerDay: 10000, nzbPerDay: 2000, duration: '1 year', price: '10€' },
     ],
   },
   {
