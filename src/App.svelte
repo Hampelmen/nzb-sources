@@ -35,9 +35,9 @@
   <Navbar />
 
   <main class="mx-auto max-w-7xl px-4 py-6">
-    <!-- <div class="mb-8 rounded-lg border-4 border-dashed border-gray-700 p-4">
+    <div class="mb-8 rounded-lg border-4 border-dashed border-gray-700 p-4">
      <p class="text-center text-lg font-bold text-yellow-400">{strings[$langStore].notice}</p>
-   </div> -->
+   </div>
 
     <!-- GLOBAL FILTERS (affects all tables) -->
     <div class="mb-8">
