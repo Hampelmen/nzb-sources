@@ -230,7 +230,7 @@ export const strings = {
       '(until--30d--no--login)': '(bis 30 Tage ohne Anmeldung)',
       '(until--180d--no--login)': '(bis 180 Tage ohne Anmeldung)',
       '(often--down)': '(Hohe Ausfall rate)',
-      'German Movie and TV Encodes': 'Deutsche Film und TV Encodes',
+      'DE, Movie and TV Encodes': 'DE, Film und TV Encodes',
       '': ''
     },
   },
@@ -279,6 +279,7 @@ export function tApiKey(lang: Lang, key: apiLimit) {
   if (key === null) return strings[lang].api.unknown;
   return strings[lang].api[key] ?? strings[lang].api.unknown;
 }
+
 
 
 
