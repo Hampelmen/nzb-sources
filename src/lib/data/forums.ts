@@ -27,7 +27,7 @@ export const forums: Indexer[] = [
   },
   {
     id: 'cinema-of-usenet',
-    name: 'Cinema of Usenet.',
+    name: 'Cinema of Usenet',
     url: 'https://www.cinema-of-usenet.com/',
     registration: 'closed',
     content: 'German Movie and TV Encodes',
