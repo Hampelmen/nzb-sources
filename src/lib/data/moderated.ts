@@ -469,9 +469,9 @@ export const moderated: Indexer[] = [
     name: 'SceneNZBs',
     url: 'https://scenenzbs.com/',
     registration: 'open',
-    payments: ['Stripe', 'NOWPayments'],
+    payments: ['Stripe', 'BTCPAY'],
     crypto: ['BTC', 'DASH', 'ETH', 'LTC', 'XMR', 'etc'],
-    content: 'DE (ES, EN)',
+    content: 'DE, EN, ES, ...',
     memberships: [
       {
         nameKey: 'free',
@@ -481,8 +481,8 @@ export const moderated: Indexer[] = [
         duration: 'Lifetime',
         priceKey: 'free',
       },
-      { name: 'VIP (no xxx)', apiPerDay: 2000, nzbPerDay: 400, duration: '1 year', price: '15€' },
-      { name: 'Premium VIP', apiPerDay: 10000, nzbPerDay: 2000, duration: '1 year', price: '20€' },
+      { name: 'User API', apiPerDay: 100, nzbPerDay: 5, duration: '30 days', price: 'free' },
+      { name: 'Supporter', apiPerDay: 10000, nzbPerDay: 400, duration: '1 year', price: '10-15€' },
     ],
   },
   {
