@@ -58,14 +58,6 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
-    id: 'friends-of-binaries',
-    name: 'Friends of Binaries',
-    url: 'https://friends-of-binaries.info/index.php',
-    registration: 'invite, application',
-    content: 'DE',
-    opened: '',
-  },
-  {
     id: 'hduse',
     name: 'HDUse',
     url: 'https://hduse.net/',
