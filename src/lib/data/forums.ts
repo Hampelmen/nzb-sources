@@ -114,14 +114,6 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
-    id: 'secretbinaries',
-    name: 'SecretBinaries',
-    url: 'https://www.secretbinaries.net/',
-    registration: 'closed',
-    content: 'DE',
-    opened: '',
-  },
-  {
     id: 'sky-of-usenet',
     name: 'Sky of Usenet',
     url: 'https://sky-of-use.net/',
