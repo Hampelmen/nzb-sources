@@ -192,10 +192,10 @@ export const moderated: Indexer[] = [
         name: 'Free',
         apiPerDay: 100,
         nzbPerDay: 100,
-        duration: '?',
+        duration: '7 days',
         priceKey: 'free',
       },
-      { name: 'VIP', apiPerDay: '?', nzbPerDay: '?', duration: '1 year', price: '$5' },
+      { name: 'VIP', apiPerDay: '20000', nzbPerDay: '?', duration: '1 year', price: '$5' },
     ],
   },
   {
