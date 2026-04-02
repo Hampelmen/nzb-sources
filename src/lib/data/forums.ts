@@ -82,6 +82,14 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
+    id: 'noprobs-revived',
+    name: 'noprobs revived',
+    url: 'https://noprobs-revived.com/',
+    registration: 'open',
+    content: 'NL',
+    opened: '',
+  },
+  {
     id: 'nzbcave',
     name: 'NZBCave',
     url: 'https://www.nzbcave.co.uk/v3/index.php',
