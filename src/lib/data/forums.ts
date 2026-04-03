@@ -130,6 +130,14 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
+    id: 'samurai-place',
+    name: 'Samurai Place',
+    url: 'https://samuraiplace.com/',
+    registration: 'invite only',
+    content: 'NL',
+    opened: '',
+  },
+  {
     id: 'the-evil-news',
     name: 'The Evil News',
     url: 'https://the-evil-news.info/v2/forum.php',
