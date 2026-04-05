@@ -74,8 +74,8 @@ export const moderated: Indexer[] = [
     name: 'ameNZB',
     url: 'https://amenzb.moe/',
     registration: 'open',
-    payments: ['CoinPayments'],
-    crypto: ['XMR', 'BTC', 'LTC', 'BCH', 'ETH', 'RVN', 'ZEC', 'etc'],
+    payments: [],
+    crypto: [],
     content: 'EN, Anime',
     memberships: [
       { nameKey: 'Free', apiPerDay: 10, nzbPerDay: 10, duration: 'Lifetime', priceKey: 'free' },
