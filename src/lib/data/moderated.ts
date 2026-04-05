@@ -70,6 +70,22 @@ export const moderated: Indexer[] = [
     ],
   },
   {
+    id: 'amenzb',
+    name: 'ameNZB',
+    url: 'https://amenzb.moe/',
+    registration: 'open',
+    payments: ['CoinPayments'],
+    crypto: ['XMR', 'BTC', 'LTC', 'BCH', 'ETH', 'RVN', 'ZEC', 'etc'],
+    content: 'EN, Anime',
+    memberships: [
+      { nameKey: 'Free', apiPerDay: 10, nzbPerDay: 10, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'Kirisame', apiPerDay: 500, nzbPerDay: 50, duration: '30 days', priceKey: '5000 pts' },
+      { nameKey: 'Shigure', apiPerDay: 2500, nzbPerDay: 250, duration: '30 days', priceKey: '10000 pts' },
+      { nameKey: 'Samidare', apiPerDay: 10000, nzbPerDay: 1000, duration: '30 days', priceKey: '25000 pts' },
+      { nameKey: 'Arashi', apiPerDay: 50000, nzbPerDay: 5000, duration: '30 days', priceKey: '45000 pts' },
+    ],
+  },
+  {
     id: 'baka-board',
     name: 'Baka Board',
     url: 'https://baka-bewerbung.su/',
