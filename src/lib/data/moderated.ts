@@ -195,26 +195,6 @@ export const moderated: Indexer[] = [
     ],
   },
   {
-    id: 'grumpynzb',
-    name: 'GrumpyNZB',
-    url: 'https://grumpynzb.com',
-    registration: 'invite',
-    payments: ['PayPal'],
-    crypto: [],
-    content: 'EN',
-    memberships: [
-      {
-        nameKey: 'free',
-        name: 'Free',
-        apiPerDay: 100,
-        nzbPerDay: 100,
-        duration: '7 days',
-        priceKey: 'free',
-      },
-      { name: 'VIP', apiPerDay: '20000', nzbPerDay: '?', duration: '1 year', price: '$5' },
-    ],
-  },
-  {
     id: 'headphones',
     name: 'Headphones',
     url: 'https://headphones.codeshy.com/vip/',
