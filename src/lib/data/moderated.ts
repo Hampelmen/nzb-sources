@@ -100,6 +100,20 @@ export const moderated: Indexer[] = [
     ],
   },
   {
+    id: 'bluraynzb',
+    name: 'BlurayNZB',
+    url: 'https://bluraynzb.org/',
+    registration: 'invite',
+    payments: ['Stripe'],
+    crypto: [],
+    content: 'Complete BluRays',
+    memberships: [
+      { nameKey: 'Free', apiPerDay: 50, nzbPerDay: 2, duration: 'Lifetime', priceKey: 'free' },
+      { nameKey: 'VIP', apiPerDay: ?, nzbPerDay: 50, duration: 'Lifetime', priceKey: '25€' },
+      { nameKey: 'Uploader', apiPerDay: ?, nzbPerDay: 50, duration: 'Lifetime', priceKey: '25€' },
+    ],
+  },
+  {
     id: 'digitalcarnage',
     name: 'DigitalCarnage',
     url: 'https://digitalcarnage.info/',
