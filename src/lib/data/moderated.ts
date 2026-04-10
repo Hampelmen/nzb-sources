@@ -109,7 +109,7 @@ export const moderated: Indexer[] = [
     content: 'Complete BluRays',
     memberships: [
       { nameKey: 'Free', apiPerDay: 50, nzbPerDay: 2, duration: 'Lifetime', priceKey: 'free' },
-      { nameKey: 'VIP', apiPerDay: ?, nzbPerDay: 50, duration: 'Lifetime', priceKey: '25€' },
+      { nameKey: 'VIP', apiPerDay: '?', nzbPerDay: 50, duration: 'Lifetime', priceKey: '25€' },
       { nameKey: 'Uploader', apiPerDay: ?, nzbPerDay: 50, duration: 'Lifetime', priceKey: '25€' },
     ],
   },
