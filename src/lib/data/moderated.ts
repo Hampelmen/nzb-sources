@@ -158,7 +158,7 @@ export const moderated: Indexer[] = [
     id: 'drunkenslug',
     name: 'DrunkenSlug',
     url: 'https://drunkenslug.com/',
-    registration: 'invite',
+    registration: 'open',
     payments: ['PayPal', 'BTCPAY (self hosted)', 'UK Amazon Giftcards'],
     crypto: ['BTC', 'AltCoins (fees)'],
     content: 'EN',
