@@ -51,6 +51,25 @@ export const moderated: Indexer[] = [
     ],
   },
   {
+    id: 'aninzb',
+    name: 'aninzb',
+    url: 'https://aninzb.moe/',
+    registration: '-',
+    payments: ['-'],
+    crypto: ['-'],
+    content: 'EN, Anime',
+    memberships: [
+      {
+        nameKey: '-',
+        name: '-',
+        apiPerDay: '-',
+        nzbPerDay: '-',
+        duration: '-',
+        priceKey: '-',
+      },
+    ],
+  },
+  {
     id: 'animetosho',
     name: 'AnimeTosho',
     url: 'https://animetosho.org/',
