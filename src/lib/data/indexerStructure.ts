@@ -11,7 +11,7 @@ export type RegistrationCode =
   | 'down'
   | 'unknown';
 
-export type Limit = number | string | 'unlimited' | '?' | null;
+export type Limit = number | string & {} | 'unlimited' | '?';
 export type apiLimit = 'noApi' | 'unlimited' | 'noApiButRSS' | 'cantBeAdded' | 'notWorking' | null;
 
 // Optional keys let you store language-agnostic codes and translate at render time.

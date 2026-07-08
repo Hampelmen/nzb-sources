@@ -15,7 +15,7 @@ export const forums: Indexer[] = [
     url: 'https://www.back2use.net/3sd4rt8/index.php',
     registration: 'closed',
     content: 'DE',
-    openend: '',
+    opened: '',
   },
   {
     id: 'baka-board',
