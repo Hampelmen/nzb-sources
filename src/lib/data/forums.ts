@@ -18,14 +18,6 @@ export const forums: Indexer[] = [
     opened: '',
   },
   {
-    id: 'baka-board',
-    name: 'Baka Board',
-    url: 'https://baka-bewerbung.su/',
-    registration: 'application',
-    content: 'DE, Anime',
-    opened: '',
-  },
-  {
     id: 'binnews-france',
     name: 'BinNews France',
     url: 'https://www.binnews.eu/',
