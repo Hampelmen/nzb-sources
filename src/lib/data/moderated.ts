@@ -105,20 +105,6 @@ export const moderated: Indexer[] = [
     ],
   },
   {
-    id: 'baka-board',
-    name: 'Baka Board',
-    url: 'https://baka-bewerbung.su/',
-    registration: 'invite',
-    payments: [],
-    crypto: [],
-    content: 'DE, Anime',
-    memberships: [
-      { nameKey: 'Kōhai', apiPerDay: 2500, nzbPerDay: 25, duration: 'Lifetime', priceKey: 'free' },
-      { nameKey: 'Taichō', apiPerDay: 5000, nzbPerDay: 75, duration: 'Lifetime', priceKey: 'free' },
-      { nameKey: 'Ōkami', apiPerDay: 5000, nzbPerDay: 125, duration: 'Lifetime', priceKey: 'free' },
-    ],
-  },
-  {
     id: 'bluraynzb',
     name: 'BlurayNZB',
     url: 'https://bluraynzb.org/',
