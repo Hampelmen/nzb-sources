@@ -260,7 +260,7 @@ export const moderated: Indexer[] = [
       {
         nameKey: 'free',
         name: 'User',
-        apiPerDay: 50,
+        apiPerDay: 30,
         nzbPerDay: 5,
         duration: '30 days',
         priceKey: 'free',
